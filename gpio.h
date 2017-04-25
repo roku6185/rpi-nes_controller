@@ -1,7 +1,7 @@
 #ifndef _GPIO_H_
 #define _GPIO_H_
 
-#define DURATION_POLLING_IN_MS		17 // TODO: lower to 200ns?
+#define DURATION_POLLING_IN_MS		50
 #define DURATION_LATCH_SIGNAL_IN_MS	12
 #define DURATION_PULSE_SIGNAL_IN_US	6
 
