@@ -14,6 +14,7 @@ typedef struct
 
 int uinput_init();
 int uinput_close();
+int uinput_sync(int uinput_fd);
 int nes_buttons_to_uinput(int uinput_fd, nes_button *buttons, int length);
 
 #endif

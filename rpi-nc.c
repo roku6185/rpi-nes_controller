@@ -87,8 +87,9 @@ int main()
 			bcm2835_gpio_write(PULSE_PIN, LOW);
 		}
 
-		nes_buttons_to_stdout(buttons, BUTTON_COUNT);
-		//nes_buttons_to_uinput(uinput_fd, buttons, BUTTON_COUNT);
+		//nes_buttons_to_stdout(buttons, BUTTON_COUNT);
+		nes_buttons_to_uinput(uinput_fd, buttons, BUTTON_COUNT);
+		uinput_sync(uinput_fd);
 
 		delay(DURATION_POLLING_IN_MS);
 	}

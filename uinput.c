@@ -59,6 +59,23 @@ int uinput_close(int uinput_fd)
 	return close(uinput_fd);
 }
 
+int uinput_sync(int uinput_fd)
+{
+	struct input_event ev;
+	memset(&ev, 0, sizeof(ev));
+
+	ev.type = EV_SYN;
+	ev.code = 0;
+	ev.value = 0;
+
+	if (write(uinput_fd, &ev, sizeof(ev)) < 0)
+	{
+		return -1;
+	}
+
+	return 1;
+}
+
 int nes_buttons_to_uinput(int uinput_fd, nes_button *buttons, int length)
 {
 	struct input_event ev;
