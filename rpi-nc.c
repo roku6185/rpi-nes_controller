@@ -38,9 +38,9 @@ int main()
 	nes_button buttons[BUTTON_COUNT] =
 	{
 	  {"A",		KEY_A,		0},
-	  {"B",		KEY_B,		0},
-	  {"Select",	KEY_Q,		0},
-	  {"Start",	KEY_W,		0},
+	  {"B",		KEY_S,		0},
+	  {"Select",	KEY_Z,		0},
+	  {"Start",	KEY_X,		0},
 	  {"Up",	KEY_UP,		0},
 	  {"Down",	KEY_DOWN,	0},
 	  {"Left",	KEY_LEFT,	0},
